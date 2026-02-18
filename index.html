@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Link Tree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-card" id="mainCard">
+            <div class="card-content">
+                <div class="card-back">
+                    <div class="card-pattern"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons" id="buttons">
+            <button class="btn all-in-btn" onclick="fanCards()">
+                All In
+            </button>
+            <button class="btn fold-btn" onclick="window.open('https://www.google.com', '_blank')">
+                Fold
+            </button>
+        </div>
+        
+        <div class="fanned-cards" id="fannedCards">
+            <a href="https://www.reddit.com" target="_blank" class="link-card card-1">
+                <div class="card-content">
+                    <span class="card-text">Reddit</span>
+                </div>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="link-card card-2">
+                <div class="card-content">
+                    <span class="card-text">Twitter</span>
+                </div>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="link-card card-3">
+                <div class="card-content">
+                    <span class="card-text">Instagram</span>
+                </div>
+            </a>
+            <a href="https://www.patreon.com" target="_blank" class="link-card card-4">
+                <div class="card-content">
+                    <span class="card-text">Patreon</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function fanCards() {
+            const mainCard = document.getElementById('mainCard');
+            const fannedCards = document.getElementById('fannedCards');
+            const buttons = document.getElementById('buttons');
+            
+            // Start swipe down animation
+            mainCard.classList.add('swipe-down');
+            buttons.classList.add('hidden');
+            
+            // Show fanned cards after main card is completely off screen
+            setTimeout(() => {
+                fannedCards.classList.add('active');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
