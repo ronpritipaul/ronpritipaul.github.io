@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="title" id="title">
+            Are you ready to enter the world of Sonya Sanguine?
+        </div>
         <div class="main-card" id="mainCard">
             <div class="card-content">
                 <div class="card-back">
@@ -19,9 +22,11 @@
         <div class="buttons" id="buttons">
             <button class="btn all-in-btn" onclick="fanCards()">
                 All In
+                <span class="btn-subtitle">(18+)</span>
             </button>
             <button class="btn fold-btn" onclick="window.open('https://www.google.com', '_blank')">
                 Fold
+                <span class="btn-subtitle">Under 18</span>
             </button>
         </div>
         
@@ -54,10 +59,12 @@
             const mainCard = document.getElementById('mainCard');
             const fannedCards = document.getElementById('fannedCards');
             const buttons = document.getElementById('buttons');
+            const title = document.getElementById('title');
             
             // Start swipe down animation
             mainCard.classList.add('swipe-down');
             buttons.classList.add('hidden');
+            title.classList.add('hidden');
             
             // Show fanned cards after main card is completely off screen
             setTimeout(() => {

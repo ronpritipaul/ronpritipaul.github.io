@@ -108,16 +108,37 @@ body {
     border-radius: 12px;
 }
 
-.buttons {
-    display: flex;
-    gap: 20px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease;
+}
+
+.title.hidden {
+    opacity: 0;
+}
+
+.btn-subtitle {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+    opacity: 0.8;
 }
 
 .buttons.hidden {
     opacity: 0;
     transform: translateY(20px);
     pointer-events: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .btn {
@@ -133,26 +154,20 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.fold-btn {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-    color: white;
-}
-
 .fold-btn:hover {
     background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(238, 90, 36, 0.4);
 }
 
-.all-in-btn {
-    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+.fold-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
     color: white;
 }
 
-.all-in-btn:hover {
-    background: linear-gradient(135deg, #44a08d 0%, #4ecdc4 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(68, 160, 141, 0.4);
+.all-in-btn {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+    color: white;
 }
 
 .fanned-cards {
@@ -166,6 +181,12 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.8s ease;
+}
+
+.all-in-btn:hover {
+    background: linear-gradient(135deg, #44a08d 0%, #4ecdc4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(68, 160, 141, 0.4);
 }
 
 .fanned-cards.active {
